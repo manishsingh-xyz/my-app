@@ -1,0 +1,19 @@
+
+<h1>Select dropdown with search option</h1>
+<div class="dropdownWrapper" tabindex="1" (blur)="closeDropdown()" >
+  <span *ngIf="!isExpanded" (click)="toggle(); emptyArray()" class="defaultInput">
+    {{selectedItem}}
+    <i class="caret"></i>
+  </span>
+  <div *ngIf="isExpanded" class="listWrapper" >
+    <input type="text" [(ngModel)]="selectedItem" class="formControl" placeholder="Enter Text To Search">
+    <ul class="selctOrderList">
+      <li *ngFor="let element of (cities | filter:selectedItem)"  (click)="toggle(); updateModel(element)" >
+       {{element}}
+      </li>      
+    </ul>
+  </div>
+</div>
+
+<h1>Tag Component</h1>
+<app-tags></app-tags>

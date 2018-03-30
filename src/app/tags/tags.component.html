@@ -1,0 +1,8 @@
+<div class="tag dropdownWrapper">
+  <input type="text" class="tagenter" [(ngModel)]="tagdata" (keyup.enter)="addTag(tagdata)" placeholder="Enter text and hit enter to create a tag."/>  
+</div>
+<div class="tagdata">
+  <div class="tagwrapper">
+   <span class="tagtext" *ngFor="let tagelement of tags; let i = index">{{tagelement}}<i class="delete-icon" (click)="removeTag(i)"></i></span>      
+  </div>
+</div>
