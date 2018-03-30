@@ -1,6 +1,6 @@
 
 <h1>Select dropdown with search option</h1>
-<div class="dropdownWrapper" tabindex="1" (blur)="closeDropdown()" >
+<div class="dropdownWrapper" >
   <span *ngIf="!isExpanded" (click)="toggle(); emptyArray()" class="defaultInput">
     {{selectedItem}}
     <i class="caret"></i>
